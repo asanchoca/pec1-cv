@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+/*-------
+  BLOCKS
+--------*/
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  padding: 2rem;
+  font-family: $font-body;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: $cv-ligthbackground;
+  color: $cv-color;
+}
+
+h1, h2 {
+  font-family: $font-title;
+}
+
+i {
+  font-family: $font-icon;
+}
+
+.cv__maincontainer {
+  display: grid;
+  grid-template-columns: 1.5fr 2.5fr; //Total 4fr
+  background-color: $cv-darkbackground;
+  text-align: center;
+  margin: 0 15%;//top, rigth, bottom, left
+
+  @media (max-width: $mqMaxWidth) {
+    grid-template-columns: none;
+    grid-template-rows: 1.5fr 2.5fr;
+  }
+
+  h2 {
+    text-align: left;
+    padding-left: 10%;
+  }
+
+  ul {
+    padding-left: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+}
+
+.photo {
+  background-image: url("../images/code.jpg");
+  background-repeat:no-repeat;
+  background-position: center;
+  background-origin:padding-box;
+  background-size:100%;
+  height: 30vh;
+  width: unset;
+}
+
+/*---------
+  ELEMENTS
+----------*/
+
+.cv__aboutme {
+  margin: 5% 20%;
+  text-align: center;
+}
+
+.cv__footer {
+  margin-top: 1.5rem;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+/*---------
+  MODIFIERS
+----------*/
+
+.cv--container-blue {
+  background-color: $cv-category;
+  color: #FFFF;
+}
